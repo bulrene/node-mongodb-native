@@ -135,11 +135,6 @@ function matchSpec(chai, utils) {
 
     const result = generateMatchAndDiff(expected, actual, { sessionData });
 
-    if (!result.match) {
-      console.log('fizzz');
-      console.dir(actual, { depth: 6 });
-    }
-
     chai.Assertion.prototype.assert.call(
       this,
       result.match,
